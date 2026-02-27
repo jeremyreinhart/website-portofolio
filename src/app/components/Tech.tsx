@@ -4,14 +4,15 @@ import Image from "next/image";
 
 const images = [
   { id: 1, img: "/image/javascript.png", name: "JavaScript" },
-  { id: 2, img: "/image/react.png", name: "React" },
-  { id: 3, img: "/image/node.png", name: "Node.js" },
-  { id: 4, img: "/image/express.png", name: "Express" },
-  { id: 5, img: "/image/typescript.png", name: "TypeScript" },
-  { id: 6, img: "/image/tailwind.png", name: "Tailwind" },
-  { id: 7, img: "/image/postgre.png", name: "PostgreSQL" },
-  { id: 8, img: "/image/github.png", name: "Github" },
-  { id: 9, img: "/image/postman.jpg", name: "Postman" },
+  { id: 2, img: "/image/react.png", name: "React JS" },
+  { id: 3, img: "/image/next.png", name: "Next JS" },
+  { id: 4, img: "/image/node.png", name: "Node.js" },
+  { id: 5, img: "/image/express.png", name: "Express" },
+  { id: 6, img: "/image/typescript.png", name: "TypeScript" },
+  { id: 7, img: "/image/tailwind.png", name: "Tailwind" },
+  { id: 8, img: "/image/postgre.png", name: "PostgreSQL" },
+  { id: 9, img: "/image/github.png", name: "Github" },
+  { id: 10, img: "/image/postman.jpg", name: "Postman" },
 ];
 
 export const Tech = () => {
