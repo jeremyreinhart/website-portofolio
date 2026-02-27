@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -13,7 +14,7 @@ export const Navbar = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 h-20">
         <Link href="/">
           <span className="hover:text-green-500 text-xl font-semibold">
-            Jeremy Reinhart Parulian
+            <Image src="/image/logo.png" alt="name" width={100} height={100} />
           </span>
         </Link>
 
