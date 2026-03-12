@@ -47,6 +47,16 @@ export const Projects = () => {
       github: "https://github.com/jeremyreinhart/phonestore",
       live: "https://phonestore-amber.vercel.app/",
     },
+    {
+      id: 4,
+      title: "Url-Shortener",
+      description:
+        "A simple website to shorten long URL links to a maximum of 6 characters. You can customize the URL and also generate a QR Code.",
+      image: "/image/shortener.png",
+      tech: ["React.js", "Tailwind", "Go"],
+      github: "https://github.com/jeremyreinhart/url-shrotener-be",
+      live: "https://url-shrotener-fe.vercel.app/",
+    },
   ];
 
   return (
