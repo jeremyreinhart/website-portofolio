@@ -67,7 +67,7 @@ export const Profile = () => {
 
             <Button asChild size="sm" className="bg-black w-35 rounded-2xl">
               <Link
-                href="https://drive.google.com/file/d/1faov1U_tLoN8OdjiFHev-O_7c31XQBKD/view?usp=sharing"
+                href="https://drive.google.com/file/d/1px5GeX67JaRyJuZHjHBffCXLP_UClQ--/view?usp=sharing"
                 target="_blank"
               >
                 Download CV

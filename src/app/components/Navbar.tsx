@@ -90,7 +90,7 @@ export const Navbar = () => {
             className="bg-black hover:bg-gray-800 rounded-2xl"
           >
             <Link
-              href="https://drive.google.com/file/d/1faov1U_tLoN8OdjiFHev-O_7c31XQBKD/view?usp=sharing"
+              href="https://drive.google.com/file/d/1px5GeX67JaRyJuZHjHBffCXLP_UClQ--/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 "
