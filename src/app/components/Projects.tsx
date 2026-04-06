@@ -20,18 +20,18 @@ export const Projects = () => {
     {
       id: 1,
       title: "Circle App",
-      description:
-        "Circle app is a clone application like X where users can follow other users and also like and comment on posts.",
+      description: "Social media app with follow, like, and comment features.",
+      highlight: "Fullstack App (React + Express + PostgreSQL)",
       image: "/image/circle.png",
-      tech: ["React", "Node.js", "Express", "PostgreSQL", "Tailwind"],
+      tech: ["React", "Node.js", "Express", "PostgreSQL"],
       github: "https://github.com/jeremyreinhart/circle-app-fe",
       live: "",
     },
     {
       id: 2,
       title: "Split Bill Calculator",
-      description:
-        "Split Bill Calculator is an application for converting strokes containing names and prices into text using OCR. Split Bill also allows you to divide the bill by person or item and share it via WhatsApp or Telegram.",
+      description: "OCR-based app to split bills and share results easily.",
+      highlight: "OCR + Share to WhatsApp/Telegram",
       image: "/image/split-bill.png",
       tech: ["Next.js", "Tailwind", "OCR"],
       github: "https://github.com/jeremyreinhart/split-bill-calculator",
@@ -40,8 +40,8 @@ export const Projects = () => {
     {
       id: 3,
       title: "Phone Store",
-      description:
-        "Phone Store is an application used to sell mobile phones where all stock and products are handled by the admin and users can choose the items they want to buy and it is also integrated with Midtrans for making payments.",
+      description: "E-commerce app with payment integration using Midtrans.",
+      highlight: "Payment Gateway Integration",
       image: "/image/phonestore.png",
       tech: ["Next.js", "Tailwind", "Supabase"],
       github: "https://github.com/jeremyreinhart/phonestore",
@@ -49,77 +49,85 @@ export const Projects = () => {
     },
     {
       id: 4,
-      title: "Url-Shortener",
-      description:
-        "A simple website to shorten long URL links to a maximum of 6 characters. You can customize the URL and also generate a QR Code.",
+      title: "URL Shortener",
+      description: "Shorten URLs with custom links and QR code generator.",
+      highlight: "Go Backend + QR Code Feature",
       image: "/image/shortener.png",
-      tech: ["React.js", "Tailwind", "Go"],
+      tech: ["React", "Tailwind", "Go"],
       github: "https://github.com/jeremyreinhart/url-shrotener-be",
       live: "https://url-shrotener-fe.vercel.app/",
     },
   ];
 
   return (
-    <section id="projects" className="max-w-6xl mx-auto px-4  scroll-mt-25">
-      <div className="text-center mb-7">
-        <h2 className="text-4xl font-bold tracking-tight">My Projects</h2>
+    <section
+      id="projects"
+      className="max-w-6xl mx-auto px-4 py-20 scroll-mt-24"
+    >
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold tracking-tight">Featured Projects</h2>
 
-        <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-lg">
-          Some of my recent work and contributions
+        <p className="mt-4 text-gray-500 max-w-xl mx-auto">
+          A selection of projects showcasing my fullstack development skills.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {projects.map((project) => (
           <Card
             key={project.id}
-            className="groupoverflow-hiddenborder border-white/20shadow-lg hover:shadow-2xl
-        hover:-translate-y-2
-        transition duration-500
-        bg-white/70 backdrop-blur
-      "
+            className="group overflow-hidden border border-white/20 bg-white/60 backdrop-blur-md shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-500"
           >
-            <div className="relative w-full h-72 bg-muted overflow-hidden">
-              <div className="absolute inset-0 bg-linear-to-tr from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 z-10" />
+            <div className="relative w-full h-64 overflow-hidden">
+              <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-500 z-10" />
 
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-contain p-6 group-hover:scale-105 transition duration-500"
+                className="object-cover group-hover:scale-105 transition duration-500"
               />
+
+              <div className="absolute top-4 left-4 z-20">
+                <span className="text-xs bg-black/70 text-white px-3 py-1 rounded-full">
+                  {project.highlight}
+                </span>
+              </div>
             </div>
 
             <CardHeader>
-              <CardTitle className="text-2xl font-semibold  transition">
+              <CardTitle className="text-xl font-semibold">
                 {project.title}
               </CardTitle>
             </CardHeader>
 
             <CardContent>
-              <p className="text-muted-foreground text-sm leading-relaxed text-justify">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 {project.description}
               </p>
 
               <div className="flex flex-wrap gap-2 mt-4">
                 {project.tech.map((tech, index) => (
-                  <Badge key={index} className="rounded-full px-3 py-1 ">
+                  <Badge
+                    key={index}
+                    className="rounded-full px-3 text-black py-1 text-xs bg-gray-100 hover:bg-gray-200 transition"
+                  >
                     {tech}
                   </Badge>
                 ))}
               </div>
             </CardContent>
 
-            <CardFooter className="flex gap-4">
+            <CardFooter className="flex gap-3">
               <Button
                 asChild
                 variant="outline"
                 size="sm"
-                className="hover:bg-muted hover:scale-105 transition"
+                className="hover:scale-105 transition"
               >
                 <Link href={project.github} target="_blank">
                   <Github className="w-4 h-4 mr-2" />
-                  Github
+                  Code
                 </Link>
               </Button>
 
@@ -131,13 +139,13 @@ export const Projects = () => {
                 >
                   <Link href={project.live} target="_blank">
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
+                    Live
                   </Link>
                 </Button>
               ) : (
                 <Button size="sm" disabled>
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  Live Demo
+                  Live
                 </Button>
               )}
             </CardFooter>

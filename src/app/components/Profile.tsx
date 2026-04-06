@@ -6,6 +6,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const Profile = () => {
+  const profile = {
+    name: "Jeremy Reinhart",
+    role: "Fullstack Developer",
+    location: "Cempaka Baru, Jakarta Pusat, Indonesia",
+  };
   return (
     <div className="max-w-6xl mx-auto px-4 py-16">
       <div className="flex flex-col lg:flex-row items-center gap-10">
@@ -32,27 +37,21 @@ export const Profile = () => {
 
         <div className="w-full lg:w-2/3 flex flex-col gap-4 text-center lg:text-left">
           <h1 className="text-3xl md:text-4xl font-bold">
-            Hi, I &apos;m Jeremy Reinhart 👋
+            Hi, I&apos;m {profile.name} 👋
           </h1>
 
-          <h4 className="text-lg text-gray-500 font-medium">
-            Full-Stack Developer
-          </h4>
+          <h4 className="text-xl text-gray-500 font-medium">{profile.role}</h4>
 
           <p className="text-justify">
-            As a graduate of Informatics Engineering, I have an interest in
-            software development, systems analysis, and programming. I have
-            experience in developing web applications and have also participated
-            in a Fullstack Web Developer bootcamp at Harisenin.com. I am used to
-            working in a team, have good problem-solving skills, and always
-            strive to continue learning and keeping up with the latest
-            technological developments. With a strong interest in technological
-            innovation, I am ready to contribute effectively in a dynamic and
-            evolving work environment.
+            I&apos;m a full-stack developer focused on building scalable and
+            efficient web applications using a variety of modern technologies,
+            including React, Next, Node.js, and Express.js. I enjoy solving
+            complex problems and continually improving my web development
+            skills.
           </p>
 
           <p className="flex">
-            <MapPin /> Cempaka Baru, Jakarta Pusat, Indonesia
+            <MapPin /> {profile.location}
           </p>
 
           <div className="flex gap-4 justify-center lg:justify-start">
