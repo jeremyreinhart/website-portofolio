@@ -49,7 +49,7 @@ export const Navbar = () => {
             className="bg-neutral-900 hover:bg-gray-800 rounded-2xl h-8 w-35"
           >
             <Link
-              href="https://drive.google.com/file/d/1faov1U_tLoN8OdjiFHev-O_7c31XQBKD/view?usp=sharing"
+              href="https://drive.google.com/file/d/1px5GeX67JaRyJuZHjHBffCXLP_UClQ--/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"
@@ -93,7 +93,6 @@ export const Navbar = () => {
               href="https://drive.google.com/file/d/1px5GeX67JaRyJuZHjHBffCXLP_UClQ--/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 "
             >
               Download CV
             </Link>
